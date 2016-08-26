@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Urban Yoga</title>
+		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+		<link href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+		<link href="style.min.css" type="text/css" rel="stylesheet">
+
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="node_modules/chart.js/dist/chart.min.js"></script>
+
+		<script src="script.js"></script>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body class="gradient_background">
+		<div class='header'>
+			<div class='container'>
+				<div class='row'>
+					<div class='col-md-3'>
+						<img src='logo.png' class='logo'>
+					</div>
+				</div>
+			</div>
+			<nav class='menu'>
+				<ul>
+					<li class='active'><a href="#" data-menu="1">link</a></li>
+					<li><a href="#" data-menu="2">link</a></li>
+					<li><a href="#" data-menu="3">link</a></li>
+					<li><a href="#" data-menu="4">link</a></li>
+				</ul>
+			</nav>
+
+			<nav class='submenu'>
+				<div class='container'>
+					<div class='row'>
+						<div class='col-md-12'>
+							<ul data-parentmenu="1">
+								<li class='active'><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+							</ul>
+							<ul data-parentmenu="2" hidden>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+							</ul>
+							<ul data-parentmenu="3" hidden>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+							</ul>
+							<ul data-parentmenu="4" hidden>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+								<li><a href="#">link</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="row">
+					<div class='col-md-2 sidebar'>
+						<!-- Start Left Sidebar -->
+						<button class='btn btn-success btn-lg newprogrambtn'><i class='glyphicon glyphicon-plus glyphicon-2x'></i></button><br>
+						<span class='newprogram'>New Program</span>
+						<!-- End Left Sidebar -->
+					</div>
+					<div class='col-md-10'>
+						<div class='row'>
+							<!-- Start Content -->
+							<div class='col-md-4'>
+
+								<div class="well white">
+									<h4>Yoga Party <button class='edit btn btn-default pull-right btn-xs'><i class="glyphicon glyphicon-pencil"></i></button> </h4>
+
+									<h5>Sales by month</h5>
+
+									<canvas class="sales width="200" height="150"></canvas>
+
+									<div class='middle'>
+										<table>
+											<thead>
+												<tr><th class="left">Total Monthly</th><th class="center">Current</th><th class="right">1 - Year</th></tr>
+											</thead>
+											<tbody>
+												<tr><td class="left">Sales</td><td class="center">$30,000</td><td class="right hardlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+											</tbody>
+										</table>
+									</div>
+									<div class='offset'>
+										<div class='more' hidden>
+											<table>
+												<thead>
+													<tr><th class='left'>Price Name</th><th>Current</th><th class="right">1 - Year</th></th>
+												</thead>
+												<tbody>
+													<tr><td class="left">Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+													<tr><td class="left">Longer Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+												</tbody>
+											</table>
+										</div>
+
+										<a href='#' class='toggle'><span>more</span><span hidden>less</span></a>
+									</div>
+
+								</div>
+							</div>
+							<div class='col-md-4'>
+
+								<div class="well white">
+									<h4>Yoga Party <button class='edit btn btn-default pull-right btn-xs'><i class="glyphicon glyphicon-pencil"></i></button> </h4>
+
+									<h5>Sales by month</h5>
+
+									<canvas class="sales width="200" height="150"></canvas>
+
+									<div class='middle'>
+										<table>
+											<thead>
+												<tr><th class="left">Total Monthly</th><th class="center">Current</th><th class="right">1 - Year</th></tr>
+											</thead>
+											<tbody>
+												<tr><td class="left">Sales</td><td class="center">$30,000</td><td class="right hardlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+											</tbody>
+										</table>
+									</div>
+									<div class='offset'>
+										<div class='more' hidden>
+											<table>
+												<thead>
+													<tr><th class='left'>Price Name</th><th>Current</th><th class="right">1 - Year</th></th>
+												</thead>
+												<tbody>
+													<tr><td class="left">Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+													<tr><td class="left">Longer Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+												</tbody>
+											</table>
+										</div>
+
+										<a href='#' class='toggle'><span>more</span><span hidden>less</span></a>
+									</div>
+
+								</div>
+							</div>
+							<div class='col-md-4'>
+
+								<div class="well white">
+									<h4>Yoga Party <button class='edit btn btn-default pull-right btn-xs'><i class="glyphicon glyphicon-pencil"></i></button> </h4>
+
+									<h5>Sales by month</h5>
+
+									<canvas class="sales width="200" height="150"></canvas>
+
+									<div class='middle'>
+										<table>
+											<thead>
+												<tr><th class="left">Total Monthly</th><th class="center">Current</th><th class="right">1 - Year</th></tr>
+											</thead>
+											<tbody>
+												<tr><td class="left">Sales</td><td class="center">$30,000</td><td class="right hardlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+											</tbody>
+										</table>
+									</div>
+									<div class='offset'>
+										<div class='more' hidden>
+											<table>
+												<thead>
+													<tr><th class='left'>Price Name</th><th>Current</th><th class="right">1 - Year</th></th>
+												</thead>
+												<tbody>
+													<tr><td class="left">Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+													<tr><td class="left">Longer Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+												</tbody>
+											</table>
+										</div>
+
+										<a href='#' class='toggle'><span>more</span><span hidden>less</span></a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='col-md-12'>
+								<table class='allprograms'>
+									<thead>
+										<tr>
+											<th class='left'>All Programs</th>
+											<th class='center'>Monthly Sales</th>
+											<th class='right'>Monthly Attendance</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>Open Practice</th><td>$572.00</td><td>276 Views</td>
+										</tr>
+										<tr>
+											<td colspan="3"><a class="toggle"><span>more</span><span hidden>less</span></a><div class="more" hidden>
+
+											</div></td>
+										</tr>
+										<tr>
+											<th>Yoga Videos</th><td>$391.32</td><td>82 Views</td>
+										</tr>
+										<tr>
+											<td colspan="3"><a class="toggle"><span>more</span><span hidden>less</span></a><div class="more" hidden>
+
+											</div></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+
+						<!-- End Content -->
+					</div>
+
+
+			</div>
+		</div>
+	</body>
+</html>
