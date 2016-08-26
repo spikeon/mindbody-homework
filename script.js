@@ -29,20 +29,6 @@ var hard_sparkline_line_options = {
 	height: 20,
 };
 
-var barData = {
-	labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
-	datasets : [
-		{
-			backgroundColor : barColor1,
-			data : [456,479,324,569,702,600, 100]
-		},
-		{
-			backgroundColor : barColor2,
-			data : [364,504,605,400,345,320, 200]
-		}
-
-	]
-};
 
 var barOptions = {
 
@@ -52,6 +38,7 @@ var barOptions = {
 	},
 	scales: {
 		xAxes: [{
+			beginAtZero: true,
 			display: true,
 			gridLines : {
 					display: false,
@@ -59,26 +46,62 @@ var barOptions = {
 			},
 			ticks : {
 				display: true,
+				beginAtZero: true,
 				zeroLineWidth: 0
 			}
 		}],
 		yAxes: [{
+			ticks:{
+				beginAtZero: true,
+			},
 			display: false
 		}]
 	}
 };
 
-$(function(){
-$(".sales").each(function(){
-	var myBarChart = new Chart($(this), {
-	    type: 'bar',
-	    data: barData,
-	    options: barOptions
-	});
-});
+function get_random_sparkline(){
+	var r = [];
+	for(i=0; i <= 20; i++){
+		r.push(Math.random()*20);
+	}
 
-	$('.hardlinehere').each(function(){$(this).sparkline('html',hard_sparkline_line_options);});
-	$('.softlinehere').each(function(){$(this).sparkline('html',soft_sparkline_line_options);});
+	return r;
+}
+function get_random_barchart(){
+	var r = [];
+	for(i=1; i <= 7; i++){
+		r.push( Math.random()*200 + 300);
+	}
+	console.log(r);
+	return r;
+}
+
+
+$(function(){
+	$(".sales").each(function(){
+		var myBarChart = new Chart($(this), {
+		    type: 'bar',
+		    data: {
+				labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
+				datasets : [
+					{
+						backgroundColor : barColor1,
+						data : get_random_barchart()
+					},
+					{
+						backgroundColor : barColor2,
+						data : get_random_barchart()
+					}
+
+				]
+			},
+		    options: barOptions
+		});
+	});
+
+
+	$('.hardlinehere').each(function(){$(this).sparkline(get_random_sparkline(),hard_sparkline_line_options);});
+	$('.softlinehere').each(function(){$(this).sparkline(get_random_sparkline(),soft_sparkline_line_options);});
 
 	$('.toggle').click(function(e){
 		e.preventDefault();

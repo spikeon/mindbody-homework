@@ -24,6 +24,20 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+	@media (max-width:992px){
+		padding-top: 80px;
+	}
+
+}
+nav.navbar{
+	img.logo{
+		height: 70px;
+		width: auto;
+		position: relative;
+		left: -30px;
+		top: -25px;
+	}
+
 }
 
 .header{
@@ -271,8 +285,25 @@ body {
 		position: reltive;
 		right: -1px;
 	}
+	.newprogram{
+		display: none;
+	}
+	@media (max-width:992px){
+		display: block;
+		width: 100%;
+		.newprogram{
+			display: inline-block;
+			padding-left: 20px;
+			line-height: 2em;
+			font-size: 2em;
+		}
+	}
+
 }
 .newprogram{
 	font-size: 0.8em;
 	font-weight: 500;
+	@media (max-width:992px){
+		display: none;
+	}
 }

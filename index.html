@@ -17,29 +17,88 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body class="gradient_background">
-		<div class='header'>
-			<div class='container'>
-				<div class='row'>
-					<div class='col-md-3'>
-						<img src='logo.png' class='logo'>
+		<nav class="navbar navbar-default navbar-fixed-top hidden-lg hidden-md">
+  			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#"><img src="logo.png" class="logo"></a>
+			    </div>
+
+
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+						<li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link <span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+							<li><a href="#" class='active'>link</a></li>
+  				            <li><a href="#">link</a></li>
+  				            <li><a href="#">link</a></li>
+  				            <li><a href="#">link</a></li>
+				          </ul>
+				        </li>
+						<li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link <span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+							<li><a href="#">link</a></li>
+  				            <li><a href="#">link</a></li>
+  				            <li><a href="#">link</a></li>
+  				            <li><a href="#">link</a></li>
+				          </ul>
+				        </li>
+
+						<li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link <span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+							<li><a href="#">link</a></li>
+  				            <li><a href="#">link</a></li>
+  				            <li><a href="#">link</a></li>
+  				            <li><a href="#">link</a></li>
+				          </ul>
+				        </li>
+						<li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">link <span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="#">link</a></li>
+				            <li><a href="#">link</a></li>
+				            <li><a href="#">link</a></li>
+				            <li><a href="#">link</a></li>
+				          </ul>
+				        </li>
+
+				      </ul>
+
+  			</div>
+		</nav>
+		<div class="header hidden-sm hidden-xs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<img src="logo.png" class="logo">
 					</div>
 				</div>
 			</div>
-			<nav class='menu'>
+			<nav class="menu hidden-sm hidden-xs">
 				<ul>
-					<li class='active'><a href="#" data-menu="1">link</a></li>
+					<li class="active"><a href="#" data-menu="1">link</a></li>
 					<li><a href="#" data-menu="2">link</a></li>
 					<li><a href="#" data-menu="3">link</a></li>
 					<li><a href="#" data-menu="4">link</a></li>
 				</ul>
 			</nav>
 
-			<nav class='submenu'>
-				<div class='container'>
-					<div class='row'>
-						<div class='col-md-12'>
+			<nav class="submenu hidden-sm hidden-xs">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
 							<ul data-parentmenu="1">
-								<li class='active'><a href="#">link</a></li>
+								<li class="active"><a href="#">link</a></li>
 								<li><a href="#">link</a></li>
 								<li><a href="#">link</a></li>
 								<li><a href="#">link</a></li>
@@ -69,135 +128,135 @@
 		</div>
 		<div class="container">
 			<div class="row">
-					<div class='col-md-2 sidebar'>
+					<div class="col-md-2 col-sm-12 col-xs-12 sidebar">
 						<!-- Start Left Sidebar -->
-						<button class='btn btn-success btn-lg newprogrambtn'><i class='glyphicon glyphicon-plus glyphicon-2x'></i></button><br>
-						<span class='newprogram'>New Program</span>
+						<button class="btn btn-success btn-lg newprogrambtn"  data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-plus glyphicon-2x"></i><span class="newprogram">New Program</span></button><br>
+						<span class="newprogram">New Program</span>
 						<!-- End Left Sidebar -->
 					</div>
-					<div class='col-md-10'>
-						<div class='row'>
+					<div class="col-md-10 col-sm-12 col-xs-12">
+						<div class="row">
 							<!-- Start Content -->
-							<div class='col-md-4'>
+							<div class="col-md-4">
 
 								<div class="well white">
-									<h4>Yoga Party <button class='edit btn btn-default pull-right btn-xs'><i class="glyphicon glyphicon-pencil"></i></button> </h4>
+									<h4>Yoga Party <button class="edit btn btn-default pull-right btn-xs"><i class="glyphicon glyphicon-pencil"></i></button> </h4>
 
 									<h5>Sales by month</h5>
 
 									<canvas class="sales width="200" height="150"></canvas>
 
-									<div class='middle'>
+									<div class="middle">
 										<table>
 											<thead>
 												<tr><th class="left">Total Monthly</th><th class="center">Current</th><th class="right">1 - Year</th></tr>
 											</thead>
 											<tbody>
-												<tr><td class="left">Sales</td><td class="center">$30,000</td><td class="right hardlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+												<tr><td class="left">Sales</td><td class="center">$30,000</td><td class="right hardlinehere"></td></tr>
 											</tbody>
 										</table>
 									</div>
-									<div class='offset'>
-										<div class='more' hidden>
+									<div class="offset">
+										<div class="more" hidden>
 											<table>
 												<thead>
-													<tr><th class='left'>Price Name</th><th>Current</th><th class="right">1 - Year</th></th>
+													<tr><th class="left">Price Name</th><th>Current</th><th class="right">1 - Year</th></th>
 												</thead>
 												<tbody>
-													<tr><td class="left">Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
-													<tr><td class="left">Longer Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+													<tr><td class="left">Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere"></td></tr>
+													<tr><td class="left">Longer Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere"></td></tr>
 												</tbody>
 											</table>
 										</div>
 
-										<a href='#' class='toggle'><span>more</span><span hidden>less</span></a>
+										<a href="#" class="toggle"><span>more</span><span hidden>less</span></a>
 									</div>
 
 								</div>
 							</div>
-							<div class='col-md-4'>
+							<div class="col-md-4">
 
 								<div class="well white">
-									<h4>Yoga Party <button class='edit btn btn-default pull-right btn-xs'><i class="glyphicon glyphicon-pencil"></i></button> </h4>
+									<h4>Yoga Party <button class="edit btn btn-default pull-right btn-xs"><i class="glyphicon glyphicon-pencil"></i></button> </h4>
 
 									<h5>Sales by month</h5>
 
 									<canvas class="sales width="200" height="150"></canvas>
 
-									<div class='middle'>
+									<div class="middle">
 										<table>
 											<thead>
 												<tr><th class="left">Total Monthly</th><th class="center">Current</th><th class="right">1 - Year</th></tr>
 											</thead>
 											<tbody>
-												<tr><td class="left">Sales</td><td class="center">$30,000</td><td class="right hardlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+												<tr><td class="left">Sales</td><td class="center">$30,000</td><td class="right hardlinehere"></td></tr>
 											</tbody>
 										</table>
 									</div>
-									<div class='offset'>
-										<div class='more' hidden>
+									<div class="offset">
+										<div class="more" hidden>
 											<table>
 												<thead>
-													<tr><th class='left'>Price Name</th><th>Current</th><th class="right">1 - Year</th></th>
+													<tr><th class="left">Price Name</th><th>Current</th><th class="right">1 - Year</th></th>
 												</thead>
 												<tbody>
-													<tr><td class="left">Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
-													<tr><td class="left">Longer Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+													<tr><td class="left">Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere"></td></tr>
+													<tr><td class="left">Longer Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere"></td></tr>
 												</tbody>
 											</table>
 										</div>
 
-										<a href='#' class='toggle'><span>more</span><span hidden>less</span></a>
+										<a href="#" class="toggle"><span>more</span><span hidden>less</span></a>
 									</div>
 
 								</div>
 							</div>
-							<div class='col-md-4'>
+							<div class="col-md-4">
 
 								<div class="well white">
-									<h4>Yoga Party <button class='edit btn btn-default pull-right btn-xs'><i class="glyphicon glyphicon-pencil"></i></button> </h4>
+									<h4>Yoga Party <button class="edit btn btn-default pull-right btn-xs"><i class="glyphicon glyphicon-pencil"></i></button> </h4>
 
 									<h5>Sales by month</h5>
 
 									<canvas class="sales width="200" height="150"></canvas>
 
-									<div class='middle'>
+									<div class="middle">
 										<table>
 											<thead>
 												<tr><th class="left">Total Monthly</th><th class="center">Current</th><th class="right">1 - Year</th></tr>
 											</thead>
 											<tbody>
-												<tr><td class="left">Sales</td><td class="center">$30,000</td><td class="right hardlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+												<tr><td class="left">Sales</td><td class="center">$30,000</td><td class="right hardlinehere"></td></tr>
 											</tbody>
 										</table>
 									</div>
-									<div class='offset'>
-										<div class='more' hidden>
+									<div class="offset">
+										<div class="more" hidden>
 											<table>
 												<thead>
-													<tr><th class='left'>Price Name</th><th>Current</th><th class="right">1 - Year</th></th>
+													<tr><th class="left">Price Name</th><th>Current</th><th class="right">1 - Year</th></th>
 												</thead>
 												<tbody>
-													<tr><td class="left">Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
-													<tr><td class="left">Longer Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere">6,7,5,8,4,6,5,7,3,9,10,1,11,4,3</td></tr>
+													<tr><td class="left">Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere"></td></tr>
+													<tr><td class="left">Longer Name Goes Here</td><td class="center">$3,000</td><td class="right softlinehere"></td></tr>
 												</tbody>
 											</table>
 										</div>
 
-										<a href='#' class='toggle'><span>more</span><span hidden>less</span></a>
+										<a href="#" class="toggle"><span>more</span><span hidden>less</span></a>
 									</div>
 
 								</div>
 							</div>
 						</div>
-						<div class='row'>
-							<div class='col-md-12'>
-								<table class='allprograms'>
+						<div class="row">
+							<div class="col-md-12">
+								<table class="allprograms">
 									<thead>
 										<tr>
-											<th class='left'>All Programs</th>
-											<th class='center'>Monthly Sales</th>
-											<th class='right'>Monthly Attendance</th>
+											<th class="left">All Programs</th>
+											<th class="center">Monthly Sales</th>
+											<th class="right">Monthly Attendance</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -229,6 +288,25 @@
 
 
 			</div>
+		</div>
+		<!-- Button trigger modal -->
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
 		</div>
 	</body>
 </html>
