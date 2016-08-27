@@ -296,11 +296,49 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		        <h4 class="modal-title" id="myModalLabel">Add Program</h4>
 		      </div>
 		      <div class="modal-body">
-		        ...
-		      </div>
+				<div class="form-group">
+     				<label for="formtitle">Program Title</label>
+     				<input type="text" class="form-control" id="formtitle" placeholder="Program Title" required>
+   				</div>
+				<div class="form-group">
+     				<label for="formtype">Program Type</label>
+     				<select class="form-control" id="formtype" required>
+						<option value="" disabled selected>Program Type</option>
+						<option value="Count Series">Count Series</option>
+						<option value="Time Series">Time Series</option>
+						<option value="Membership">Membership</option>
+					</select>
+   				</div>
+				<div class="form-group">
+					<div class="checkbox">
+		        		<label for="formscheduling">
+				        	<input type="checkbox" id="formscheduling" > Allow Online Scheduling?
+				        </label>
+				    </div>
+   				</div>
+  				<div class="form-group">
+       				<label for="formtitle">Default Capacity</label>
+       				<input type="number" class="form-control" id="formcapacity" placeholder="Default Capacity" required>
+     			</div>
+				<div class="form-group">
+     				<label for="formtype">Tabs</label>
+     				<select class="form-control" id="formtabs" multiple required>
+						<option value="Classes">Classes</option>
+						<option value="Appointments">Appointments</option>
+						<option value="Workshops">Workshops</option>
+						<option value="Outside">Outside</option>
+						<option value="Inside">Inside</option>
+						<option value="Gym">Gym</option>
+					</select>
+   				</div>
+
+
+
+			</div>
+
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		        <button type="button" class="btn btn-primary">Save changes</button>
