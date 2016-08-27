@@ -5,7 +5,7 @@ $tabs_bg_light: #fff;
 $tabs_round: 3px;
 $tabs_color: #aaa;
 $tabs_height: 50px;
-$tabs_padding: 50px;
+$tabs_padding: 20px;
 $submenu_height: 50px;
 $submenu_padding: 50px;
 $submenu_bg: #fff;
@@ -27,6 +27,9 @@ body {
 	@media (max-width:992px){
 		padding-top: 80px;
 	}
+	@media (min-width: 768px) and (max-width: 992px) {
+		padding-top: 120px;
+	}
 
 }
 nav.navbar{
@@ -37,7 +40,6 @@ nav.navbar{
 		left: -30px;
 		top: -25px;
 	}
-
 }
 
 .header{
@@ -57,11 +59,10 @@ nav.navbar{
 		bottom: $submenu_height;
 		height: $tabs_height;
 		right: 0;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ededed+0,ffffff+50,ededed+100 */
 		border: 1px solid darken($tabs_bg_dark, 10);
+		border-right: 0px;
 		border-bottom: 0px;
 		line-height: $tabs_height;
-
 		background: $tabs_bg_dark; /* Old browsers */
 		background: -moz-linear-gradient(top,  $tabs_bg_light 50%, $tabs_bg_dark 100%); /* FF3.6-15 */
 		background: -webkit-linear-gradient(top, $tabs_bg_light 50%,$tabs_bg_dark 100%); /* Chrome10-25,Safari5.1-6 */
@@ -164,93 +165,102 @@ nav.navbar{
 	background: $bg_lite; /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover,  $bg_lite 0%, $bg_lite $bg_fade_percent, $bg_dark 100%); /* FF3.6-15 */
 	background: -webkit-radial-gradient(center, ellipse cover,  $bg_lite 0%,$bg_lite $bg_fade_percent,$bg_dark 100%); /* Chrome10-25,Safari5.1-6 */
-	background: radial-gradient(ellipse at center,  $bg_lite 0%,$bg_lite $bg_fade_percent,#D3D2C6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bg_lite', endColorstr='$bg_lite',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background: radial-gradient(ellipse at center,  $bg_lite 0%,$bg_lite $bg_fade_percent,$bg_dark 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bg_lite', endColorstr='$bg_dark',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	height: 100%;
 }
-
-.well.white{
-	background: $well_bg;
-	position: relative;
-
-	padding-bottom: 10px;
-	padding-top: 10px;
-
-
-
-	h4{
-		margin-bottom: 20px;
+.program{
+	&:nth-child(4n+4){
+		clear:both;
 	}
 
-	h5{
-		font-weight: normal;
-		color: $well_link;
-	}
-	.edit{
-		&:hover{
-			color: $splash_color;
-		}
-	}
+	.well.white{
+		background: $well_bg;
+		position: relative;
 
-	a{
-		text-decoration: none;
-		color: $well_link;
-	}
+		padding-bottom: 10px;
+		padding-top: 10px;
 
-	table{
-		width: 100%;
-		table-layout:fixed;
-		.left{
-			width: 40%;
-		}
-		.center{
-			width: 20%;
-		}
-		.right{
-			width: 40%;
-			text-align: center;
-			vertical-align: middle;
+
+
+		h4{
+			margin-bottom: 20px;
 		}
 
-		th{
-			font-weight: 300;
-			font-size: 0.8em;
+		h5{
+			font-weight: normal;
+			color: $well_link;
 		}
-		td{
-			font-size: 0.8em;
+		.edit{
+			&:hover{
+				color: $splash_color;
+			}
+		}
 
-			&.left{
-				white-space: nowrap;
-			    overflow: hidden;
-			    text-overflow: ellipsis;
+		a{
+			text-decoration: none;
+			color: $well_link;
+		}
+
+		table{
+			width: 100%;
+			table-layout:fixed;
+			.left{
+				width: 38%;
+				padding-right: 5px;
+			}
+			.center{
+				width: 22%;
+
+			}
+			.right{
+				width: 40%;
+				text-align: center;
+				vertical-align: middle;
+
+			}
+
+			th{
+				font-weight: 300;
+				font-size: 0.8em;
+			}
+			td{
+				font-size: 0.8em;
+
+				&.left{
+					white-space: nowrap;
+				    overflow: hidden;
+				    text-overflow: ellipsis;
+				}
+			}
+		}
+
+		.middle{
+			background: $well_middle_bg;
+			border-top: 1px solid darken($well_middle_bg, 5);
+			border-bottom: 1px solid darken($well_middle_bg, 5);
+			position:absolute;
+			left: 0;
+			right: 0;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+
+		}
+		.offset{
+			margin-top: 75px;
+			a{
+				display: block;
+				margin-top: 10px;
 			}
 		}
 	}
-
-	.middle{
-		background: $well_middle_bg;
-		border-top: 1px solid darken($well_middle_bg, 5);
-		border-bottom: 1px solid darken($well_middle_bg, 5);
-		position:absolute;
-		left: 0;
-		right: 0;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		margin-top: 10px;
-		margin-bottom: 10px;
-
-
-	}
-	.offset{
-		margin-top: 75px;
-		a{
-			display: block;
-			margin-top: 10px;
-		}
-	}
 }
+
 .allprograms{
 	width: 100%;
 	table-layout:fixed;
@@ -262,7 +272,7 @@ nav.navbar{
 		}
 	}
 	.left, .center{
-		width: 150px;
+		width: 100px;
 	}
 	thead{
 		border-bottom: 1px solid #ccc;
@@ -288,6 +298,7 @@ nav.navbar{
 	.newprogram{
 		display: none;
 	}
+
 	@media (max-width:992px){
 		display: block;
 		width: 100%;
@@ -295,7 +306,7 @@ nav.navbar{
 			display: inline-block;
 			padding-left: 20px;
 			line-height: 2em;
-			font-size: 2em;
+			font-size: 1.8em;
 		}
 	}
 
