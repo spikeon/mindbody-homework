@@ -163,6 +163,7 @@ nav.navbar{
 	}
 }
 
+// global background
 .gradient_background{
 	background: $bg_lite; /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover,  $bg_lite 0%, $bg_lite $bg_fade_percent, $bg_dark 100%); /* FF3.6-15 */
@@ -172,9 +173,11 @@ nav.navbar{
 	height: 100%;
 }
 .program{
-	&:nth-child(4n+4){
-		clear:both;
-	}
+	// Make it so that on tablets when more is clicked on a program with more programs below it, that the ones below it move down
+	@media (min-width: 768px) and (max-width: 992px) { &:nth-child(3n+3){ clear:both; } }
+
+	// Make it so that on desktops when more is clicked on a program with more programs below it, that the ones below it move down
+	@media (min-width: 992px) { &:nth-child(4n+4){ clear:both; } }
 
 	.well.white{
 		background: $well_bg;
@@ -204,6 +207,7 @@ nav.navbar{
 			color: $well_link;
 		}
 
+		// Style the tables, ensure that both tables use the same widths
 		table{
 			width: 100%;
 			table-layout:fixed;
