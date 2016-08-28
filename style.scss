@@ -30,8 +30,8 @@ body {
 	@media (min-width: 768px) and (max-width: 992px) {
 		padding-top: 120px;
 	}
-
 }
+
 nav.navbar{
 	img.logo{
 		height: 70px;
@@ -320,8 +320,23 @@ nav.navbar{
 }
 
 .modal{
-	select:invalid {
-		color: rgba(0,0,0,0.4);
-		font-weight: 500;
+	select{
+		&.form-control {
+	    	-webkit-appearance: menulist;
+		}
+		&:invalid {
+			color: rgba(0,0,0,0.4);
+			font-weight: 500;
+		}
+		&.multi{
+			-webkit-appearance: none;
+			height: 170px;
+			option{
+				height: 25px;
+				padding-top: 5px;
+
+
+			}
+		}
 	}
 }
