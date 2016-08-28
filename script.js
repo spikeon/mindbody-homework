@@ -99,8 +99,8 @@ $(function(){
 	});
 
 	function buildPrograms(){
-		console.log(programs);
-		console.log(pricingOptions);
+		//console.log(programs);
+		//console.log(pricingOptions);
 		var $mastertemplate = $('.programtemplate').detach();
 		// Build Programs
 		$.each(programs, function(k, program){
