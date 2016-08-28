@@ -134,7 +134,7 @@ $(function(){
 		// Extract Program Template from DOM
 		var $mastertemplate = $('.programtemplate').detach();
 		// Extract Pricing Options template from master template
-		var $masterpricingtemplate = $template.find('.pricetemplate').detach();
+		var $masterpricingtemplate = $mastertemplate.find('.pricetemplate').detach();
 
 		// Remove template identifier from master template
 		$mastertemplate.removeClass('.programtemplate');
