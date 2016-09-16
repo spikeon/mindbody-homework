@@ -1,3 +1,12 @@
+/* Google Analytics Code */
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-84279981-1', 'auto');
+ga('send', 'pageview');
 
 // Settings
 
@@ -217,6 +226,9 @@ $(function(){
 			// Prevent clicking of link default action
 			e.preventDefault();
 
+			//analytics
+			ga('send', 'event', 'More Link', 'toggle', 'Urban Yoga');
+
 			// Change from "more" to "less" or vice versa
 			$(this).find('span').toggle();
 
@@ -229,6 +241,9 @@ $(function(){
 		$('.menu a').click(function(e){
 			// Prevent clicking of link default action
 			e.preventDefault();
+
+			//analytics
+			ga('send', 'event', 'Menu Tab', 'clicked', 'Urban Yoga');
 
 			// Un-select previously active tab
 			$('.menu li').removeClass('active');
@@ -244,4 +259,14 @@ $(function(){
 
 		});
 	}
+
+	$('button.edit').click(function(){
+		//analytics
+		ga('send', 'event', 'Edit Button', 'clicked', 'Urban Yoga');
+	});
+	$('button.newprogrambtn').click(function(){
+		//analytics
+		ga('send', 'event', 'New Program Button', 'clicked', 'Urban Yoga');
+	});
+
 });
