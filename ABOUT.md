@@ -7,7 +7,9 @@ Since creating this, I now see many faults in how I created it.  I have
 since learned many new technologies and I am tempted to re-write this
 in one of them.  If I do I will add it to the portfolio
 
-Orignal Homework Requirements
+Original Homework Requirements
+==============================
+
 ## Your challenge, should you choose to accept it
 1. Clone this repo (or download the zip archive) to get started.
 2. The page should look like [http://flynndev.us:9090/mindbody_homework/homework/business_overview.png](business_overview.png) on the page load:
