@@ -12,12 +12,8 @@ Original Homework Requirements
 
 ## Your challenge, should you choose to accept it
 1. Clone this repo (or download the zip archive) to get started.
-2. The page should look like [business_overview.png](http://flynndev.us:9090/mindbody_homework/business_overview.png) on the page load:
-    
-    <img src="http://flynndev.us:9090/mindbody_homework/business_overview.png" alt="alt text" width="250"/>
-3. The page should look like [business_overview_expanded.png](http://flynndev.us:9090/mindbody_homework/business_overview_expanded.png) when the "more" links are clicked:
-    
-    <img src="http://flynndev.us:9090/mindbody_homework/business_overview_expanded.png" alt="alt text" width="250"/>
+2. The page should look like [business_overview.png](http://flynndev.us/projects/mindbody_homework/business_overview.png) on the page load:
+3. The page should look like [business_overview_expanded.png](http://flynndev.us/projects/mindbody_homework/business\_overview\_expanded.png) when the "more" links are clicked:
 4. The pencil icon should change color on hover.
 5. The "New Program" button should open a form to add a new program. This is where you get some UX/design freedom, but the form should have the following fields:
     - Program Type (single select)
@@ -42,10 +38,10 @@ Original Homework Requirements
 ### Recommended for Senior Front End Engineer
 You may choose to make two API calls to populate any or all parts of page. The data returned may not reflect the amounts in the business_overview.png image. Assume that the data from these calls is correct.
   - Programs (GET: https://api.myjson.com/bins/5bdb3)
-  // - Pricing Options (GET: https://api.myjson.com/bins/17oy7)
   - Pricing Options (GET: https://api.myjson.com/bins/47axv)
 
 ### Recommended for Senior UI Developer
 You may choose to make the application repsonsive.
+
 # Help!
 Should you stumble into any questions during your quest, feel free tor reach out to your recruiter or dev contact. There are no stupid questions!
