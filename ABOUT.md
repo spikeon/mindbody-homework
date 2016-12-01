@@ -12,10 +12,10 @@ Original Homework Requirements
 
 ## Your challenge, should you choose to accept it
 1. Clone this repo (or download the zip archive) to get started.
-2. The page should look like [http://flynndev.us:9090/mindbody_homework/homework/business_overview.png](business_overview.png) on the page load:
+2. The page should look like [business_overview.png](http://flynndev.us:9090/mindbody_homework/homework/business_overview.png) on the page load:
     
     <img src="http://flynndev.us:9090/mindbody_homework/homework/business_overview.png" alt="alt text" width="250"/>
-3. The page should look like [http://flynndev.us:9090/mindbody_homework/homework/business_overview_expanded.png](business_overview_expanded.png) when the "more" links are clicked:
+3. The page should look like [business_overview_expanded.png](http://flynndev.us:9090/mindbody_homework/homework/business_overview_expanded.png) when the "more" links are clicked:
     
     <img src="http://flynndev.us:9090/mindbody_homework/homework/business_overview_expanded.png" alt="alt text" width="250"/>
 4. The pencil icon should change color on hover.
