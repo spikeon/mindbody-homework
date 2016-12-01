@@ -15,6 +15,6 @@
     "jquery": "^3.1.0",
     "jquery-sparkline": "^2.3.2"
   },
-  "liveurl" : "http://flynndev.us:9090/mindbody_homework/"
+  "liveurl" : "http://flynndev.us/projects/mindbody_homework/"
 
 }
