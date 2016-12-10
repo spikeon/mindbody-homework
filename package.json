@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "autodeploy": "git add . && git commit -m 'Auto Deployment' && git push live master"
+    "autodeploy": "git add . && git commit -m 'Auto Deployment' && git push live master",
+    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js"
   },
   "author": "Michael Flynn",
   "license": "ISC",
@@ -15,6 +16,10 @@
     "jquery": "^3.1.0",
     "jquery-sparkline": "^2.3.2"
   },
-  "liveurl" : "http://flynndev.us/projects/mindbody_homework/"
-
+  "liveurl": "http://flynndev.us/projects/mindbody_homework/",
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-core": "6.20.0",
+    "babel-preset-es2015": "6.18.0"
+  }
 }
