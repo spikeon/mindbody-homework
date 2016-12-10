@@ -159,7 +159,7 @@ $(function(){
 
 			// Generate Bar Chart
 			$template.find(".sales").each(function(){
-				new Chart($(this), {
+				var newBarChart = new Chart($(this), {
 					type: 'bar',
 					data: {
 						labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
