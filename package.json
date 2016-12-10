@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "autodeploy": "git add . && git commit -m 'Auto Deployment' && git push live master",
-    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js"
+    "babel": "babel --presets es2015 js/main.js -o js/main.bundle.js"
   },
   "author": "Michael Flynn",
   "license": "ISC",

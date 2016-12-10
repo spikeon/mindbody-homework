@@ -10,14 +10,14 @@ ga('send', 'pageview');
 
 // Settings
 
-var hardLineColor = '#31312F';
-var softLineColor = '#d9d5d0';
+let hardLineColor = '#31312F';
+let softLineColor = '#d9d5d0';
 
-var barColor1 = '#C7BBDB';
-var barColor2 = '#BCD6B6';
+let barColor1 = '#C7BBDB';
+let barColor2 = '#BCD6B6';
 
 // the settings for the light grey sparklines
-var soft_sparkline_line_options = {
+let soft_sparkline_line_options = {
 	lineColor: softLineColor,
     type: 'line',
     fillColor: false,
@@ -31,7 +31,7 @@ var soft_sparkline_line_options = {
 };
 
 // the settings for the dark grey sparklines
-var hard_sparkline_line_options = {
+let hard_sparkline_line_options = {
 	lineColor: hardLineColor,
 	type: 'line',
     fillColor: false,
@@ -44,10 +44,10 @@ var hard_sparkline_line_options = {
 };
 
 // the settings for the bar charts
-var barOptions = {
+let barOptions = {
 	categoryPercentage: 0.5,
 	legend: {
-		display: false,
+		display: false
 	},
 	scales: {
 		xAxes: [{
@@ -55,7 +55,7 @@ var barOptions = {
 			display: true,
 			gridLines : {
 					display: false,
-					drawBorder: false,
+					drawBorder: false
 			},
 			ticks : {
 				display: true,
@@ -65,7 +65,7 @@ var barOptions = {
 		}],
 		yAxes: [{
 			ticks:{
-				beginAtZero: true,
+				beginAtZero: true
 			},
 			display: false
 		}]
@@ -81,7 +81,7 @@ var barOptions = {
  * @param integer x: length of sections
  */
 Number.prototype.format = function(n, x) {
-    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+    const re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
     return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
 };
 
@@ -91,8 +91,8 @@ Number.prototype.format = function(n, x) {
  * @return Array
  */
 function get_random_sparkline(){
-	var r = [];
-	for ( var i = 0; i <= 20; i++ ) r.push(Math.random()*20);
+	let r = [];
+	for ( let i = 0; i <= 20; i++ ) r.push(Math.random()*20);
 	return r;
 }
 
@@ -104,16 +104,16 @@ function get_random_sparkline(){
  * @return Array
  */
 function get_random_barchart(){
-	var r = [];
-	for ( var i = 1; i <= 7; i++ ) r.push( Math.random()*200 + 300);
+	let r = [];
+	for ( let i = 1; i <= 7; i++ ) r.push( Math.random()*200 + 300);
 	return r;
 }
 
 /** Array of programs */
-var programs;
+let programs;
 
 /** Array of Pricing Options */
-var pricingOptions;
+let pricingOptions;
 
 $(function(){
 
@@ -137,10 +137,10 @@ $(function(){
 	function buildPrograms(){
 
 		// Extract Program Template from DOM
-		var $mastertemplate = $('.programtemplate').detach();
+		let $mastertemplate = $('.programtemplate').detach();
 
 		// Extract Pricing Options template from master template
-		var $masterpricingtemplate = $mastertemplate.find('.pricetemplate').detach();
+		let $masterpricingtemplate = $mastertemplate.find('.pricetemplate').detach();
 
 		// Remove template identifier from master template
 		$mastertemplate.removeClass('.programtemplate');
@@ -149,17 +149,17 @@ $(function(){
 		$masterpricingtemplate.removeClass('.pricetemplate');
 
 		// Build Programs
-		$.each(programs, function(k, program){
+		for(let program of programs){
 
 			// Create working copy of template
-			var $template = $mastertemplate.clone(true, true);
+			let $template = $mastertemplate.clone(true, true);
 
 			// Place working copy of template into the DOM
 			$('.programs').append($template);
 
 			// Generate Bar Chart
 			$template.find(".sales").each(function(){
-				var newBarChart = new Chart($(this), {
+				new Chart($(this), {
 					type: 'bar',
 					data: {
 						labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
@@ -190,24 +190,24 @@ $(function(){
 			$template.find('.title').text(program.Name);
 
 			// Build Pricing Options
-			for(var k in pricingOptions){
+			for(let option of pricingOptions){
 
 				// Make sure that the pricing option belongs to the program
-				if(pricingOptions[k].ProgramID == program.ProgramID){
+				if(option.ProgramID == program.ProgramID){
 
 					// Create working copy of template
-					var $pricetemplate = $masterpricingtemplate.clone(true, true);
+					let $pricetemplate = $masterpricingtemplate.clone(true, true);
 
 					// Place working copy into DOM
 					$template.find('.prices').append($pricetemplate);
 
 					// Place price into DOM
-					$pricetemplate.find('.price').text("$"+pricingOptions[k].Sales.format());
+					$pricetemplate.find('.price').text("$"+option.Sales.format());
 
 					// Place Pricing Option Name into DOM
-					$pricetemplate.find('.name').text(pricingOptions[k].Name);
-				}
+					$pricetemplate.find('.name').text(option.Name);
 
+				}
 			}
 
 			// Generate pricing option sparklines
@@ -215,7 +215,7 @@ $(function(){
 				$(this).sparkline(get_random_sparkline(),soft_sparkline_line_options);
 			});
 
-		});
+		}
 
 		// Page is built, place triggers on top of it
 		pageBuilt();
