@@ -86,21 +86,18 @@ Number.prototype.format = function(n, x) {
 };
 
 /**
- * Geneate random sparkline data
+ * Generate random sparkline data
  *
  * @return Array
  */
 function get_random_sparkline(){
 	var r = [];
-	for(i=0; i <= 20; i++){
-		r.push(Math.random()*20);
-	}
-
+	for ( var i = 0; i <= 20; i++ ) r.push(Math.random()*20);
 	return r;
 }
 
 /**
- * Geneate random bar graph data
+ * Generate random bar graph data
  *
  * Use this if you want to run the page without the API
  *
@@ -108,10 +105,7 @@ function get_random_sparkline(){
  */
 function get_random_barchart(){
 	var r = [];
-	for(i=1; i <= 7; i++){
-		r.push( Math.random()*200 + 300);
-	}
-	console.log(r);
+	for ( var i = 1; i <= 7; i++ ) r.push( Math.random()*200 + 300);
 	return r;
 }
 
@@ -122,8 +116,10 @@ var programs;
 var pricingOptions;
 
 $(function(){
+
 	// Get the programs
 	$.getJSON("https://api.myjson.com/bins/5bdb3", function(data){
+
 		// Set the programs
 		programs = data;
 
@@ -142,6 +138,7 @@ $(function(){
 
 		// Extract Program Template from DOM
 		var $mastertemplate = $('.programtemplate').detach();
+
 		// Extract Pricing Options template from master template
 		var $masterpricingtemplate = $mastertemplate.find('.pricetemplate').detach();
 
@@ -153,13 +150,16 @@ $(function(){
 
 		// Build Programs
 		$.each(programs, function(k, program){
+
 			// Create working copy of template
 			var $template = $mastertemplate.clone(true, true);
+
 			// Place working copy of template into the DOM
 			$('.programs').append($template);
+
 			// Generate Bar Chart
 			$template.find(".sales").each(function(){
-				var myBarChart = new Chart($(this), {
+				new Chart($(this), {
 					type: 'bar',
 					data: {
 						labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
@@ -179,7 +179,9 @@ $(function(){
 			});
 
 			// Generate top sparkline
-			$template.find('.hardlinehere').each(function(){$(this).sparkline(program.Sales.CurrentYear,hard_sparkline_line_options);});
+			$template.find('.hardlinehere').each(function(){
+				$(this).sparkline(program.Sales.CurrentYear,hard_sparkline_line_options);
+			});
 
 			// Place sales amount into DOM
 			$template.find('.totalsales').text('$'+program.TotalMonthlySales.format());
@@ -188,10 +190,10 @@ $(function(){
 			$template.find('.title').text(program.Name);
 
 			// Build Pricing Options
-			$.each(pricingOptions, function(k, price){
+			for(var k in pricingOptions){
 
 				// Make sure that the pricing option belongs to the program
-				if(price.ProgramID == program.ProgramID){
+				if(pricingOptions[k].ProgramID == program.ProgramID){
 
 					// Create working copy of template
 					var $pricetemplate = $masterpricingtemplate.clone(true, true);
@@ -200,16 +202,18 @@ $(function(){
 					$template.find('.prices').append($pricetemplate);
 
 					// Place price into DOM
-					$pricetemplate.find('.price').text("$"+price.Sales.format());
+					$pricetemplate.find('.price').text("$"+pricingOptions[k].Sales.format());
 
 					// Place Pricing Option Name into DOM
-					$pricetemplate.find('.name').text(price.Name);
+					$pricetemplate.find('.name').text(pricingOptions[k].Name);
 				}
-			});
+
+			}
 
 			// Generate pricing option sparklines
-			$template.find('.softlinehere').each(function(){$(this).sparkline(get_random_sparkline(),soft_sparkline_line_options);});
-
+			$template.find('.softlinehere').each(function(){
+				$(this).sparkline(get_random_sparkline(),soft_sparkline_line_options);
+			});
 
 		});
 
@@ -264,6 +268,7 @@ $(function(){
 		//analytics
 		ga('send', 'event', 'Edit Button', 'clicked', 'Urban Yoga');
 	});
+
 	$('button.newprogrambtn').click(function(){
 		//analytics
 		ga('send', 'event', 'New Program Button', 'clicked', 'Urban Yoga');
